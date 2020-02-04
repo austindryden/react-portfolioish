@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Nav extends React.Component{
     
     constructor(props){
@@ -10,23 +9,22 @@ class Nav extends React.Component{
         }
     }
     
-    
     render(){
         return(
                 <React.Fragment>
-                <a onClick={this._toggleMenu}>burger</a>
-                {this.state.isOpen ? 
-                <ul>
-                    {this.props.links.map((link, index) =>{
-                        return(
-                            <li key={index}>{link}</li>
-                        )
-                    })}
-                
-                </ul>
-                
-                : ''
-                }
+                    <a onClick={this._toggleMenu}>burger</a>
+                    {this.state.isOpen ? 
+                    <ul>
+                        {this.props.links.map((link, index) =>{
+                            return(
+                                <li key={index}>{link}</li>
+                            )
+                        })}
+                    
+                    </ul>
+                    
+                    : ''
+                    }
                 </React.Fragment>
       
             
@@ -38,8 +36,5 @@ class Nav extends React.Component{
             isOpen:!this.state.isOpen
         })}
 }
-
-
-
 
 export default Nav;
