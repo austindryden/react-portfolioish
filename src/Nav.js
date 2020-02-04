@@ -5,24 +5,38 @@ class Nav extends React.Component{
     
     constructor(props){
         super(props);
-
-
+        this.state = {
+            isOpen: true
+        }
     }
     
     
     render(){
         return(
-            <div id="navbar">
+                <React.Fragment>
+                <a onClick={this._toggleMenu}>burger</a>
+                {this.state.isOpen ? 
                 <ul>
                     {this.props.links.map((link, index) =>{
                         return(
                             <li key={index}>{link}</li>
                         )
                     })}
+                
                 </ul>
-            </div>
+                
+                : ''
+                }
+                </React.Fragment>
+      
+            
         )
     }
+
+    _toggleMenu = () => {
+        this.setState({
+            isOpen:!this.state.isOpen
+        })}
 }
 
 
