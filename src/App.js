@@ -1,25 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+
+const content = `heres a bunch of words that I'm typing kind of string of consiously about how I need a block of text and I Cant just shortcut my way into a block of text so I gotta mash some keys manually.`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <Main content={content} />
+      <Footer />
+    </React.Fragment>
   );
 }
 
