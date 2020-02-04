@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Header(){
+function Header({content}){
     return(
-        <header><h1>good enough developer-er-er</h1></header>
+        <header><h1>{content}</h1></header>
     );
 }
 
