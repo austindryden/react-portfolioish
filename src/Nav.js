@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 class Nav extends React.Component{
     
@@ -15,9 +17,10 @@ class Nav extends React.Component{
                     <a onClick={this._toggleMenu}>burger</a>
                     {this.state.isOpen ? 
                     <ul>
-                        {this.props.links.map((link, index) =>{
+                        {this.props.links.map((item, index) =>{
                             return(
-                                <li key={index}>{link}</li>
+                                
+                                <li key={index}><Link to={item.path}>{item.text}</Link></li>
                             )
                         })}
                     

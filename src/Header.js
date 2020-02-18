@@ -5,7 +5,7 @@ function Header({content, headerLinks}){
     console.log(headerLinks)
     return(
         <header>
-            <Nav links={headerLinks} />
+            {/* <Nav links={headerLinks} /> */}
             <h1>{content}</h1>
         </header>
     );
