@@ -5,6 +5,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import Nav from "./Nav";
+import Blog from "./Blog";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 
@@ -20,10 +21,7 @@ function App() {
       <Header content={headerCopy} />
       <Nav links={linknames} />
       <Switch>
-        <Route path="/blog/list">
-          <BlogList />
-        </Route>
-        <Route path="/blog">
+        <Route path="/blog/:blogId">
           <Blog />
         </Route>
         <Route path="/">
@@ -44,10 +42,6 @@ function App() {
 
 function Home(){
   return <h1> You are Home</h1>
-}
-
-function Blog(){
-  return <h1> You are on the Blog</h1>
 }
 
 function BlogList(){
